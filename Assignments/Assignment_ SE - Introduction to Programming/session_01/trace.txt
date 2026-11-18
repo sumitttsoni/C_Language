@@ -1,0 +1,43 @@
+TRACE of flowchart boxes visited (names exactly as in recharge_flowchart.drawio, page 1)
+Plans: A = Rs 149, 20 days, 1 GB/day | B = Rs 239, 28 days, 1.5 GB/day | C = Rs 349, 56 days, 3 GB/day
+
+INPUT 1: 1.5 GB per day for 28 days
+ 1. Start
+ 2. Define plans A, B, C
+ 3. Input daily GB need            (1.5)
+ 4. Input days needed              (28)
+ 5. Set best = None, price = 99999
+ 6. Take next plan                 (Plan A)
+ 7. Plan fits need?                (No: 1 GB < 1.5 GB and 20 days < 28 days)
+ 8. More plans?                    (Yes)
+ 9. Take next plan                 (Plan B)
+10. Plan fits need?                (Yes: 1.5 >= 1.5 and 28 >= 28)
+11. Cheaper than best?             (Yes: 239 < 99999)
+12. Update best plan               (best = Plan B, price = 239)
+13. More plans?                    (Yes)
+14. Take next plan                 (Plan C)
+15. Plan fits need?                (Yes: 3 >= 1.5 and 56 >= 28)
+16. Cheaper than best?             (No: 349 > 239)
+17. More plans?                    (No)
+18. Best is None?                  (No)
+19. Print best plan and price      (Plan B, Rs 239)
+20. End
+
+INPUT 2: 10 GB per day for 28 days (no plan fits)
+ 1. Start
+ 2. Define plans A, B, C
+ 3. Input daily GB need            (10)
+ 4. Input days needed              (28)
+ 5. Set best = None, price = 99999
+ 6. Take next plan                 (Plan A)
+ 7. Plan fits need?                (No: 1 GB < 10 GB)
+ 8. More plans?                    (Yes)
+ 9. Take next plan                 (Plan B)
+10. Plan fits need?                (No: 1.5 GB < 10 GB)
+11. More plans?                    (Yes)
+12. Take next plan                 (Plan C)
+13. Plan fits need?                (No: 3 GB < 10 GB)
+14. More plans?                    (No)
+15. Best is None?                  (Yes)
+16. Print no plan fits
+17. End

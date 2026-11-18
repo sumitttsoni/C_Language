@@ -1,0 +1,23 @@
+ALGORITHM: Choose the cheapest mobile recharge plan
+
+Plans (price, validity, data per day):
+  Plan A: Rs 149, 20 days, 1 GB per day
+  Plan B: Rs 239, 28 days, 1.5 GB per day
+  Plan C: Rs 349, 56 days, 3 GB per day
+
+A plan "fits" when its data per day is at least the daily need AND its validity is at least the days needed.
+
+1. START.
+2. DEFINE the three plans A, B and C with their price, validity and data per day.
+3. INPUT the daily data need in GB.
+4. INPUT the number of days needed.
+5. SET best plan to NONE and best price to 99999.
+6. TAKE the next plan from the list (A, then B, then C).
+7. IF the plan fits the need, GO TO step 8, ELSE GO TO step 10.
+8. IF the plan price is less than the best price, GO TO step 9, ELSE GO TO step 10.
+9. SET best plan to this plan and best price to this plan's price.
+10. IF more plans remain in the list, GO TO step 6, ELSE GO TO step 11.
+11. IF best plan is NONE, GO TO step 12, ELSE GO TO step 13.
+12. PRINT "No plan fits your need" and GO TO step 14.
+13. PRINT the best plan name and its price.
+14. END.
