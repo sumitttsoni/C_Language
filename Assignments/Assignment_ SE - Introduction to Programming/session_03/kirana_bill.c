@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 #define GST_PERCENT 5
+
 int main(void)
 {
-
     printf("=====================================\n");
     printf("        SHREE GANESH KIRANA STORE\n");
     printf("        Navrangpura, Ahmedabad\n");
@@ -40,14 +41,12 @@ int main(void)
     printf("%c\t%d\tRs. %.2f\n", item3_code, item3_qty, item3_rate);
     printf("-------------------------------------\n");
 
-
     float shop_target_float = 1234567.89f;
     double shop_target_double = 1234567.89;
 
     printf("Shop target (float)  : %.2f\n", shop_target_float);
     printf("Shop target (double) : %.2f\n", shop_target_double);
     printf("-------------------------------------\n");
-
     const float DELIVERY_CHARGE = 20.50f;
 
     printf("Bill settings: GST %d%%, delivery Rs. %.2f, type %c, %s\n",
