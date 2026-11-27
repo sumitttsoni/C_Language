@@ -15,7 +15,6 @@ int main(void)
     };
     int i, row, col;
 
-    /* Task 1: monthly readings, yearly total and average */
     int total = 0;
 
     printf("Monthly readings\n");
@@ -26,9 +25,8 @@ int main(void)
     printf("Yearly total: %d units\n", total);
     printf("Average: %.2f units\n", (float)total / MONTHS);
 
-    /* Task 2: highest, lowest and count above 300 in one loop */
-    int high = 0;   /* index of highest, starts at first element */
-    int low = 0;    /* index of lowest, starts at first element */
+    int high = 0;  
+    int low = 0;   
     int crossed = 0;
 
     for (i = 0; i < MONTHS; i++) {
@@ -43,7 +41,7 @@ int main(void)
     printf("Lowest: Month %d with %d units\n", low + 1, units[low]);
     printf("Months above %d units: %d\n", LIMIT, crossed);
 
-    /* Task 3: society table with a total for each household */
+    
     printf("\nSociety readings\n");
     printf("House  ");
     for (col = 0; col < MONTHS; col++)
@@ -61,11 +59,6 @@ int main(void)
         printf("%6d\n", rowTotal);
     }
 
-    /* Task 4: society total for each month and the highest month
-     * Hand check:
-     * Month 1: 110 + 95 + 150 = 355
-     * Month 6: 380 + 345 + 450 = 1175
-     */
     int topMonth = 0;
     int topTotal = 0;
 
